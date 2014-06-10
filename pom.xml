@@ -6,7 +6,7 @@
         <version>7</version>
     </parent>
     <groupId>com.github.sstone</groupId>
-    <artifactId>akka-amqp-proxies_2.10</artifactId>
+    <artifactId>akka-amqp-proxies_2.11</artifactId>
     <version>1.4-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
@@ -17,8 +17,8 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <encoding>UTF-8</encoding>
-        <scala.version>2.10.3</scala.version>
-        <akka.version>2.2.3</akka.version>
+        <scala.version>2.11.1</scala.version>
+        <akka.version>2.3.3</akka.version>
     </properties>
 
     <licenses>
@@ -133,12 +133,12 @@
     <dependencies>
         <dependency>
             <groupId>com.github.sstone</groupId>
-            <artifactId>amqp-client_2.10</artifactId>
-            <version>1.3-ML4</version>
+            <artifactId>amqp-client_2.11</artifactId>
+            <version>1.4</version>
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-actor_2.10</artifactId>
+            <artifactId>akka-actor_2.11</artifactId>
             <version>${akka.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -150,8 +150,8 @@
         </dependency>
         <dependency>
             <groupId>org.json4s</groupId>
-            <artifactId>json4s-jackson_2.10</artifactId>
-            <version>3.2.6</version>
+            <artifactId>json4s-jackson_2.11</artifactId>
+            <version>3.2.9</version>
         </dependency>
         <dependency>
             <groupId>com.google.protobuf</groupId>
@@ -171,14 +171,14 @@
         <!-- test dependencies -->
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-testkit_2.10</artifactId>
+            <artifactId>akka-testkit_2.11</artifactId>
             <version>${akka.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.10</artifactId>
-            <version>1.9</version>
+            <artifactId>scalatest_2.11</artifactId>
+            <version>2.1.7</version>
             <scope>test</scope>
         </dependency>
         <dependency>

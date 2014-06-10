@@ -2,7 +2,7 @@ package com.github.sstone.amqp.proxy
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.WordSpec
+import org.scalatest.WordSpecLike
 import org.scalatest.matchers.ShouldMatchers
 import akka.testkit.{ImplicitSender, TestKit}
 import akka.actor.{Actor, Props, ActorSystem}
@@ -25,9 +25,10 @@ object ErrorTest {
 }
 
 @RunWith(classOf[JUnitRunner])
-class ErrorTest extends TestKit(ActorSystem("TestSystem")) with ImplicitSender with WordSpec with ShouldMatchers {
+class ErrorTest extends TestKit(ActorSystem("TestSystem")) with ImplicitSender with WordSpecLike with ShouldMatchers {
   import ErrorTest.ErrorRequest
   implicit val timeout: akka.util.Timeout = 5 seconds
+  implicit val ec = system.dispatcher
 
   "AMQP Proxy" should {
 

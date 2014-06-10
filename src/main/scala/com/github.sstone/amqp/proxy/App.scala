@@ -30,6 +30,7 @@ import Demo._
 object Server {
   def main(args: Array[String]) {
     val system = ActorSystem("MySystem")
+    implicit val ec = system.dispatcher
     val calc = system.actorOf(Props[Calculator])
     val connFactory = new ConnectionFactory()
     connFactory.setHost("localhost")
